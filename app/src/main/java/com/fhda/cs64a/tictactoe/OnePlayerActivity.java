@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import static com.fhda.cs64a.tictactoe.GameBoard.COMPUTER_NAME;
 import static com.fhda.cs64a.tictactoe.GameBoard.EXTRA_BOOLEAN_PLAYER1_GO_FIRST;
 import static com.fhda.cs64a.tictactoe.GameBoard.EXTRA_STRING_PLAYER1_NAME;
 import static com.fhda.cs64a.tictactoe.GameBoard.EXTRA_STRING_PLAYER2_NAME;
@@ -75,7 +76,7 @@ public class OnePlayerActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), GameBoard.class);
                 intent.putExtra(EXTRA_STRING_PLAYER1_NAME, firstPlayerName);
-                intent.putExtra(EXTRA_STRING_PLAYER2_NAME, "Android");
+                intent.putExtra(EXTRA_STRING_PLAYER2_NAME, COMPUTER_NAME);
                 intent.putExtra(EXTRA_BOOLEAN_PLAYER1_GO_FIRST, isFirstMovePlayer1);
                 startActivity(intent);
             }
