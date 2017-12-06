@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.fhda.cs64a.tictactoe.GameBoard">
+
+    <TextView
+        android:id="@+id/txtMsgTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark">
+
+        <TableRow
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FAFAFA"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text=" "
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FAFAFA"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text=" "
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FAFAFA"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text=" "
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FAFAFA"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text=" "
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:typeface="monospace"  />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FAFAFA"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text=" "
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:typeface="monospace"  />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FAFAFA"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text=" "
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:typeface="monospace"  />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FAFAFA"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text=" "
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:typeface="monospace"  />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FAFAFA"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text=" "
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:typeface="monospace"  />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#FAFAFA"
+                android:fontFamily="monospace"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text=" "
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:typeface="monospace"  />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txtMsgBottom"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginTop="15dp"
+        android:paddingTop="0dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
