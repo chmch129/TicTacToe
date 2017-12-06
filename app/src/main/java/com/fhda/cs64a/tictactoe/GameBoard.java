@@ -112,7 +112,7 @@ public class GameBoard extends AppCompatActivity implements View.OnClickListener
             currentPlayer = player2;
         }
 
-        checkIfComputerGoNext(currentPlayer);
+        cleanTheBoard(currentPlayer);
     }
 
     @Override
@@ -183,6 +183,7 @@ public class GameBoard extends AppCompatActivity implements View.OnClickListener
 
     private void checkIfComputerGoNext(String playerName) {
         if (availableButtons.isEmpty()) {
+            displayScore("");
             Log.w(TAG, "checkIfComputerGoNext: availableButtons is empty");
             return;
         }
