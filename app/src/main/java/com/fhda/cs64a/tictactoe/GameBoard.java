@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +40,7 @@ public class GameBoard extends AppCompatActivity implements View.OnClickListener
 
     private TextView txtMsgTop;
     private TextView txtMsgBottom;
+    private TableLayout btnTable;
     private Button btn1;
     private Button btn2;
     private Button btn3;
@@ -62,6 +64,8 @@ public class GameBoard extends AppCompatActivity implements View.OnClickListener
         hiScoreDbAdapter = new HiScoreDbAdapter(this);
         txtMsgTop = (TextView) findViewById(R.id.txtMsgTop);
         txtMsgBottom = (TextView) findViewById(R.id.txtMsgBottom);
+
+        btnTable = (TableLayout) findViewById(R.id.btnTable);
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
         btn3 = (Button) findViewById(R.id.btn3);
@@ -195,17 +199,23 @@ public class GameBoard extends AppCompatActivity implements View.OnClickListener
             int randomNum = random.nextInt(max - min + 1) + min;
             Log.d(TAG, "checkIfComputerGoNext: randomNum = " + randomNum);
             final char btnTag = availableButtons.charAt(randomNum);
-            int index = btnTag - '0'; // tag range '1' ~'9'
-            Log.d(TAG, "checkIfComputerGoNext: btnTag = " + String.valueOf(btnTag));
-            Log.d(TAG, "checkIfComputerGoNext: index = " + index);
 
-            if (index > 0 && index <= btnArray.length) {
-                Button btn = btnArray[index - 1];
-                buttonPressed(btn, true);
-                Log.d(TAG, "checkIfComputerGoNext: btn.getTag() = " + btn.getTag().toString());
-            } else {
-                Log.e(TAG, "checkIfComputerGoNext: index out of range : " + index);
-            }
+            // option 1:
+            Button btn = btnTable.findViewWithTag(String.valueOf(btnTag));
+            buttonPressed(btn, true);
+
+            // option 2:
+//            int index = btnTag - '0'; // tag range '1' ~'9'
+//            Log.d(TAG, "checkIfComputerGoNext: btnTag = " + String.valueOf(btnTag));
+//            Log.d(TAG, "checkIfComputerGoNext: index = " + index);
+
+//            if (index > 0 && index <= btnArray.length) {
+//                Button btn = btnArray[index - 1];
+//                buttonPressed(btn, true);
+//                Log.d(TAG, "checkIfComputerGoNext: btn.getTag() = " + btn.getTag().toString());
+//            } else {
+//                Log.e(TAG, "checkIfComputerGoNext: index out of range : " + index);
+//            }
         }
     }
 
